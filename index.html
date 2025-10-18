@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador Interativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="phone" id="phone">
+      <div class="top-bar">
+        <div class="theme-toggle">
+          <label class="switch">
+            <input type="checkbox" id="themeSwitch">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button class="rotate-btn" id="rotateBtn">↻</button>
+      </div>
+
+      <div class="screen" id="homeScreen">
+        <div class="app-grid">
+          <div class="app" data-app="gallery">
+            <img src="icons/gallery.png" alt="Galeria">
+            <p>Galeria</p>
+          </div>
+          <div class="app" data-app="music">
+            <img src="icons/music.png" alt="Música">
+            <p>Música</p>
+          </div>
+          <div class="app" data-app="browser">
+            <img src="icons/browser.png" alt="Navegador">
+            <p>Navegador</p>
+          </div>
+          <div class="app" data-app="notes">
+            <img src="icons/notes.png" alt="Anotações">
+            <p>Anotações</p>
+          </div>
+          <div class="app" data-app="calculator">
+            <img src="icons/calculator.png" alt="Calculadora">
+            <p>Calculadora</p>
+          </div>
+          <div class="app" data-app="snake">
+            <img src="icons/game.png" alt="Jogos">
+            <p>Jogos</p>
+          </div>
+          <div class="app" data-app="profile">
+            <img src="icons/profile.png" alt="Perfil">
+            <p>Perfil</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Apps -->
+      <div class="app-screen" id="galleryApp">
+        <div class="back-btn">⟵ Voltar</div>
+        <div class="gallery">
+          <img src="images/img1.jpg" class="gallery-img">
+          <img src="images/img2.jpg" class="gallery-img">
+        </div>
+      </div>
+
+      <div class="app-screen" id="musicApp">
+        <div class="back-btn">⟵ Voltar</div>
+        <div class="music-player">
+          <h2>R.E.M. - Losing My Religion</h2>
+          <audio controls>
+            <source src="musica.mp3" type="audio/mpeg">
+            Seu navegador não suporta áudio.
+          </audio>
+        </div>
+      </div>
+
+      <div class="app-screen" id="browserApp">
+        <div class="back-btn">⟵ Voltar</div>
+        <div class="browser">
+          <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquise no Google...">
+            <button id="searchBtn">🔍</button>
+          </div>
+          <iframe id="browserFrame"></iframe>
+        </div>
+      </div>
+
+      <div class="app-screen" id="notesApp">
+        <div class="back-btn">⟵ Voltar</div>
+        <textarea id="notes" placeholder="Digite suas anotações..."></textarea>
+      </div>
+
+      <div class="app-screen" id="calculatorApp">
+        <div class="back-btn">⟵ Voltar</div>
+        <div class="calculator">
+          <input type="text" id="calcDisplay" readonly>
+          <div class="buttons">
+            <button>C</button><button>/</button><button>*</button><button>-</button>
+            <button>7</button><button>8</button><button>9</button><button>+</button>
+            <button>4</button><button>5</button><button>6</button><button>=</button>
+            <button>1</button><button>2</button><button>3</button><button>0</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-screen" id="snakeApp">
+        <div class="back-btn">⟵ Voltar</div>
+        <canvas id="snakeGame" width="300" height="300"></canvas>
+      </div>
+
+      <div class="app-screen" id="profileApp">
+        <div class="back-btn">⟵ Voltar</div>
+        <div class="profile">
+          <p>Criado por <strong>RafaToomas</strong></p>
+          <a href="https://github.com/RafaToomas" target="_blank">github.com/RafaToomas</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
